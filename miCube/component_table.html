@@ -1,0 +1,374 @@
+<!doctype html>
+<!-- 
+##############################################################
+Ignore this boilerplate if you're just trying to edit the text.
+Skip to the part that says 'The real text begins here'
+##############################################################
+
+Based on this theme: https://github.com/broccolini/dinky , which mentioned that attribution 
+is appreciated. Thanks, broccolini!
+-->
+<html lang="en">
+  <head>
+    <base target="_blank">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="citation_title" content="A template for writing scientific papers">
+    <meta name="citation_author" content="Andrew G. York">
+    <meta name="citation_publication_date" content="2017/01/05">
+    <meta name="citation_journal_title" content="Github.io">
+    <meta name="citation_pdf_url" content="
+https://andrewgyork.github.io/publication_template/Publication_template%20by%20AndrewGYork
+.pdf">
+    <title>miCube - Hohlbein Lab</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/prism.css">
+    <!--[if lt IE 9]>
+    <script src="javascript/html5shiv/html5shiv.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please 
+<a href="http://browsehappy.com/">upgrade your browser</a> to improve your 
+experience.</p>
+    <![endif]-->
+    <script src="javascript/scale-fix/scale.fix.js"></script>
+    <script src="javascript/python-highlighting/prism.js"></script>
+    <script async  src="javascript/Minimal-MathJax/MathJax.js?config=TeX-AMS_CHTML"></script>
+    <script src="javascript/update_figures.js"></script>
+    <script src="javascript/reference_list/reference_list.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">miCube: Rethinking modular fluorescence microscopy</h1>
+        <ul>
+		<li class="first"><a href="./index.html" target="_self">Main page</a></li>
+		<li class="second"><a href="./micube_description.html" target="_self">miCube description</a></li>
+		<li class="second"><a href="./component_table.html" target="_self">Component overview</a></li>
+		<br><hr style=" margin: 0.1em auto;">
+			<font style="line-height:0.5em;">
+          <a class="buttons github" href="
+https://github.com/HohlbeinLab/miCube" style="padding-top:0px;">View On GitHub</a>&nbsp;&nbsp;&nbsp;
+          <a class="buttons pdf" href="./Publication_template%20by%20AndrewGYork.pdf" style="margin-bottom:0px; align:right;">
+Download PDF</a></font>
+        </ul>
+        <font size = 1>This project is maintained by <a class="header name" href="
+https://github.com/kjamartens">Koen Martens</a></font>
+      </header>
+<!-- 
+##############################################################
+The real text begins here.
+##############################################################
+ -->
+<section>
+<h1>miCube component overview</h1>
+A full list of all components of the miCube is shown below. The numbers used in the tables are corresponding to the numbered items in Fig 1 below. The list is subdivided in main cube (red), excitation path (blue), and emission path (green).<br><br>
+
+<figure style="max-width:900px;">
+<img src="images/miCube_components/numbered_exploded_view.png" style="mix-blend-mode: multiply; width:90%; padding-left:5%; ">
+<figcaption><strong>Fig 1</strong>: Overview of the individual components of the miCube. The individual components are numbered, and explained in detail in the tables. The colours correspond to the microscope category: red is the main cube, blue is the excitation path, and green is the emission path.</figcaption>
+</figure>
+<h2>Main cube</h2>
+<table class="component_list">
+<tr>
+<th>id</th>
+<th>Manufacturer</th>
+<th>Description</th>
+<th>Image</th>
+<th>Price</th>
+<th>File or link</th>
+</tr>
+<tr class = "homemade">
+<td>1</td> <!--id-->
+<td>CNC milled</td> <!--manufacturer-->
+<td>Glass plate insert (size: 96-wells plate holder, 127.8 mm x 85.5 mm)</td> <!--description-->
+<td><img src="images/miCube_components/glass-plate-insert.jpg"></td> <!--image-->
+<td></td> <!--price-->
+<td><a href=""></a></td> <!--file/link-->
+</tr>
+<tr>
+<td>2</td> <!--id-->
+<td>ASI-Piezoconcept</td> <!--manufacturer-->
+<td>XYZ stage</td> <!--description-->
+<td><img src="images/miCube_components/XYZstage-black.jpg"></td></td> <!--image-->
+<td></td> <!--price-->
+<td><a href="http://www.asiimaging.com/index.php/products/stages/upright-stages/ms-2000-small-xy-stage/">ASI</a>,<a href="http://www.piezoconcept.com/all-products/z-insert-2/">Optophase</a></td> <!--file/link-->
+</tr>
+<tr>
+<td>3</td> <!--id-->
+<td>Nikon</td> <!--manufacturer-->
+<td>Objective: TIRF 1.49NA HP SR</td> <!--description-->
+<td><img src="images/miCube_components/Nikon-objective.jpg"></td> <!--image-->
+<td></td> <!--price-->
+<td><a href="https://www.nikoninstruments.com/en_EU/Products/Optics/Apochromat-Objectives/CFI-Plan-Apochromat-TIRF-Series">link</a></td> <!--file/link-->
+</tr>
+<tr class="homemade">
+<td>4</td> <!--id-->
+<td>CNC milled</td> <!--manufacturer-->
+<td>Top Cover</td> <!--description-->
+<td><img src="images/miCube_components/topcover.jpg"></td> <!--image-->
+<td></td> <!--price-->
+<td><a href=""></a></td> <!--file/link-->
+</tr>
+<tr class="homemade">
+<td>5</td> <!--id-->
+<td>CNC milled</td> <!--manufacturer-->
+<td>miCube block</td> <!--description-->
+<td><img src="images/miCube_components/block.jpg"></td> <!--image-->
+<td>-</td> <!--price-->
+<td><a href=""></a></td> <!--file/link-->
+</tr>
+<tr>
+<td>6</td> <!--id-->
+<td>Thorlabs</td> <!--manufacturer-->
+<td>Neutral density filter</td> <!--description-->
+<td><img src="https://www.thorlabs.com/images/large/24285-lrg.jpg"></td> <!--image-->
+<td>€65,83</td> <!--price-->
+<td><a href="https://www.thorlabs.com/thorproduct.cfm?partnumber=NE60A-A">NE60A-A</a></td> <!--file/link-->
+</tr>
+<tr>
+<td>7</td> <!--id-->
+<td>Thorlabs, Chroma</td> <!--manufacturer-->
+<td>Dichroic mirror holder and dichroic mirror</td> <!--description-->
+<td><img src="https://www.thorlabs.de/images/large/TTN042093-lrg.jpg"></td> <!--image-->
+<td>€830,88 to €880,88</td> <!--price-->
+<td><a href="https://www.thorlabs.de/thorproduct.cfm?partnumber=DFM1/M">DFM1/M</a> and <a href="https://www.chroma.com/products/parts/zt405-488-561rpc">ZT405/488/561rpc-UF2</a> or <a href="https://www.chroma.com/products/parts/zt405-488-561-640rpcv2">ZT405/488/561/640rpc-UF2</a></td> <!--file/link-->
+</tr>
+<tr>
+<td>8</td> <!--id-->
+<td>Chroma</td> <!--manufacturer-->
+<td>TIRF filter</td> <!--description-->
+<td><img src="images/miCube_components/chroma-filter.png"></td> <!--image-->
+<td>€900,00 to €950,00</td> <!--price-->
+<td><a href="https://www.chroma.com/products/parts/zet405-488-561m-trf">ZET405/488/561m-TRF</a> or <a href="https://www.chroma.com/products/parts/zet405-488-561-640m-trfv2">ZET405/488/561/640m-TRF</a></td> <!--file/link-->
+</tr>
+<tr>
+<td>9</td> <!--id-->
+<td>Thorlabs</td> <!--manufacturer-->
+<td>Connector for dichroic mirror and mirror</td> <!--description-->
+<td><img src="https://www.thorlabs.de/images/ProductGallery/C4W-CC/30mm_Cage_Cube_Connector-AV1.jpg" style="transform:scaleY(-1);"></td> <!--image-->
+<td>€46,82</td> <!--price-->
+<td><a href="https://www.thorlabs.de/thorproduct.cfm?partnumber=C4W-CC">C4W-CC</a></td> <!--file/link-->
+</tr>
+<tr>
+<td>10</td> <!--id-->
+<td>Thorlabs</td> <!--manufacturer-->
+<td>45° elliptical mirror</td> <!--description-->
+<td><img src="https://www.thorlabs.de/images/large/TTN034520-lrg.jpg"></td> <!--image-->
+<td>€270,54</td> <!--price-->
+<td><a href="https://www.thorlabs.de/thorproduct.cfm?partnumber=KCB1E/M">KCB1E/M</a> and <a href="https://www.thorlabs.de/thorproduct.cfm?partnumber=BBE1-E02">BBE1-E02</a></td> <!--file/link-->
+</tr>
+<tr class="homemade">
+<td>11</td> <!--id-->
+<td>3D printed</td> <!--manufacturer-->
+<td>Excitation path cover</td> <!--description-->
+<td><img src="images/miCube_components/excitation-cover.jpg"></td> <!--image-->
+<td>-</td> <!--price-->
+<td><a href=""></a></td> <!--file/link-->
+</tr>
+<tr>
+<td colspan=4><font align="right">Subtotal</font></td>
+<td colspan=2><div style="text-align: left;"><font align="left">±€10.000,00</font></div></td>
+</tr>
+</table>
+
+<h2>Excitation path</h2>
+<table class="component_list">
+<tr>
+<th>id</th>
+<th>Manufacturer</th>
+<th>Description</th>
+<th>Image</th>
+<th>Price</th>
+<th>File or link</th>
+</tr>
+<tr>
+<td>12</td> <!--id-->
+<td>Thorlabs</td> <!--manufacturer-->
+<td>Spacer</td> <!--description-->
+<td><img src="https://www.thorlabs.de/images/large/0370-lrg.jpg"></td> <!--image-->
+<td>€11,44</td> <!--price-->
+<td><a href="https://www.thorlabs.de/thorproduct.cfm?partnumber=SM1L05">SM1L05</a></td> <!--file/link-->
+</tr>
+<tr class="homemade">
+<td>13</td> <!--id-->
+<td>3D printed</td> <!--manufacturer-->
+<td>Reflective collimator holder</td> <!--description-->
+<td><img src="images/miCube_components/reflective-collimator-holder.jpg"></td> <!--image-->
+<td>-</td> <!--price-->
+<td><a href=""></a></td> <!--file/link-->
+</tr>
+<tr class="homemade">
+<td>14</td> <!--id-->
+<td>3D printed</td> <!--manufacturer-->
+<td>Right-angle mounting plate</td> <!--description-->
+<td><img src="images/miCube_components/right-angle-bracket.jpg"></td> <!--image-->
+<td>-</td> <!--price-->
+<td><a href=""></a></td> <!--file/link-->
+</tr>
+<tr>
+<td>15</td> <!--id-->
+<td>Thorlabs</td> <!--manufacturer-->
+<td>25 mm Translation Stage</td> <!--description-->
+<td><img src="https://www.thorlabs.de/images/large/2864-lrg.jpg"></td> <!--image-->
+<td>€257,76</td> <!--price-->
+<td><a href="https://www.thorlabs.de/thorproduct.cfm?partnumber=PT1/M">PT1/M</a></td> <!--file/link-->
+</tr>
+<tr>
+<td>16</td> <!--id-->
+<td>Thorlabs</td> <!--manufacturer-->
+<td>TIRF lens (200 mm focal length)</td> <!--description-->
+<td><img src="https://www.thorlabs.de/images/large/20594-lrg.jpg"></td> <!--image-->
+<td>€90,86</td> <!--price-->
+<td><a href="https://www.thorlabs.de/thorproduct.cfm?partnumber=AC254-200-A-ML">AC254-200-A-ML</a></td> <!--file/link-->
+</tr>
+<tr>
+<td>17</td> <!--id-->
+<td>Thorlabs</td> <!--manufacturer-->
+<td>Aperture</td> <!--description-->
+<td><img src="https://www.thorlabs.de/images/large/17622-lrg.jpg"></td> <!--image-->
+<td>€67,45</td> <!--price-->
+<td><a href="https://www.thorlabs.de/thorproduct.cfm?partnumber=SM1D12SZ">SM1D12SZ</a></td> <!--file/link-->
+</tr>
+<tr>
+<td>18</td> <!--id-->
+<td>Thorlabs</td> <!--manufacturer-->
+<td>Reflective collimator</td> <!--description-->
+<td><img src="https://www.thorlabs.de/images/large/22874-lrg.jpg"></td> <!--image-->
+<td>€877,11</td> <!--price-->
+<td><a href="https://www.thorlabs.de/thorproduct.cfm?partnumber=RC12SMA-P01">RC12SMA-P01</a></td> <!--file/link-->
+</tr>
+<tr>
+<td colspan=4><font align="right">Subtotal</font></td>
+<td colspan=2><div style="text-align: left;"><font align="left">±€10.000,00</font></div></td>
+</tr>
+</table>
+
+<h2>Emission path</h2>
+<table class="component_list">
+<tr>
+<th>id</th>
+<th>Manufacturer</th>
+<th>Description</th>
+<th>Image</th>
+<th>Price</th>
+<th>File or link</th>
+</tr>
+<tr>
+<td>19</td> <!--id-->
+<td>Andor</td> <!--manufacturer-->
+<td>Zyla 4.2 PLUS sCMOS</td> <!--description-->
+<td><img src="http://www.andor.com/UploadImages/e862f584-774b-4f3d-b58b-132c8d484e88.png" style="bottom:10px;"></td> <!--image-->
+<td></td> <!--price-->
+<td><a href="http://www.andor.com/scientific-cameras/neo-and-zyla-scmos-cameras/zyla-42-plus-scmos">link</a></td> <!--file/link-->
+</tr>
+<tr class="homemade">
+<td>20</td> <!--id-->
+<td>3D printed</td> <!--manufacturer-->
+<td>Camera mount for Andor Zyla 4.2 plus sCMOS</td> <!--description-->
+<td><img src="images/miCube_components/camera-mount.jpg"></td> <!--image-->
+<td>-</td> <!--price-->
+<td><a href=""></a></td> <!--file/link-->
+</tr>
+<tr class="homemade">
+<td>21</td> <!--id-->
+<td>3D printed</td> <!--manufacturer-->
+<td>Astigmatism block. An astigmatism holder containing an astigmatism lens can be placed on two positions.</td> <!--description-->
+<td><img src="images/miCube_components/astigmatism-block-black.jpg"></td> <!--image-->
+<td>-</td> <!--price-->
+<td><a href=""></a></td> <!--file/link-->
+</tr>
+<tr>
+<td>22</td> <!--id-->
+<td>Thorlabs</td> <!--manufacturer-->
+<td>Astigmatism lens, 1000 or 500 cm focal distance</td> <!--description-->
+<td><img src="https://www.thorlabs.com/images/large/20037-lrg.jpg"></td> <!--image-->
+<td>€110,33</td> <!--price-->
+<td><a href="https://www.thorlabs.com/thorproduct.cfm?partnumber=LJ1516RM-A">LJ1516RM</a> or <a href="https://www.thorlabs.com/thorproduct.cfm?partnumber=LJ1144RM-A">LJ1144RM</a></td> <!--file/link-->
+</tr>
+<tr class="homemade">
+<td>23</td> <!--id-->
+<td>3D printed</td> <!--manufacturer-->
+<td>Astigmatism lens holder</td> <!--description-->
+<td><img src="images/miCube_components/astigmatism-lens-holder.jpg"></td> <!--image-->
+<td>-</td> <!--price-->
+<td><a href=""></a></td> <!--file/link-->
+</tr>
+<tr class="homemade">
+<td>24</td> <!--id-->
+<td>3D printed</td> <!--manufacturer-->
+<td>Astigmatism lens holder</td> <!--description-->
+<td><img src="images/miCube_components/astigmatism-lens-holder.jpg"></td> <!--image-->
+<td>-</td> <!--price-->
+<td><a href=""></a></td> <!--file/link-->
+</tr>
+<tr>
+<td>25</td> <!--id-->
+<td>Thorlabs</td> <!--manufacturer-->
+<td>Emission path cover, cut to length</td> <!--description-->
+<td><img src="https://www.thorlabs.de/images/large/TTN032562-lrg.jpg"></td> <!--image-->
+<td>€31,29</td> <!--price-->
+<td><a href="https://www.thorlabs.de/thorproduct.cfm?partnumber=SC600">SC600</a></td> <!--file/link-->
+</tr>
+<tr class="homemade">
+<td>26</td> <!--id-->
+<td>3D printed</td> <!--manufacturer-->
+<td>Connector piece</td> <!--description-->
+<td><img src="images/miCube_components/tube-filter-block-adapter-black.jpg"></td> <!--image-->
+<td>-</td> <!--price-->
+<td><a href=""></a></td> <!--file/link-->
+</tr>
+<tr>
+<td>27</td> <!--id-->
+<td>Chroma</td> <!--manufacturer-->
+<td>Emission filter</td> <!--description-->
+<td><img src="images/miCube_components/chroma-filter.png"></td> <!--image-->
+<td>€325,00</td> <!--price-->
+<td><a href="https://www.chroma.com/products/parts/et525-50m">ET525/50m</a> or <a href="https://www.chroma.com/products/parts/et595-50m">ET595/50m</a> or <a href="https://www.chroma.com/products/parts/et700-75m">ET700/75m</a></td> <!--file/link-->
+</tr>
+<tr class="homemade">
+<td>28</td> <!--id-->
+<td>3D printed</td> <!--manufacturer-->
+<td>Emission filter holder</td> <!--description-->
+<td><img src="images/miCube_components/astigmatism-lens-holder.jpg"></td> <!--image-->
+<td>-</td> <!--price-->
+<td><a href=""></a></td> <!--file/link-->
+</tr>
+<tr class="homemade">
+<td>29</td> <!--id-->
+<td>3D printed</td> <!--manufacturer-->
+<td>Tube lens holder</td> <!--description-->
+<td><img src="images/miCube_components/emission-tube-lens-holder.jpg"></td> <!--image-->
+<td>-</td> <!--price-->
+<td><a href=""></a></td> <!--file/link-->
+</tr>
+<tr>
+<td>30</td> <!--id-->
+<td>Thorlabs</td> <!--manufacturer-->
+<td>Tube lens (200 mm focal length)</td> <!--description-->
+<td><img src="https://www.thorlabs.com/images/large/23515-lrg.jpg"></td> <!--image-->
+<td>€425,58</td> <!--price-->
+<td><a href="https://www.thorlabs.com/thorproduct.cfm?partnumber=ITL200">ITL200</a></td> <!--file/link-->
+</tr>
+<tr>
+<td colspan=4><font align="right">Subtotal</font></td>
+<td colspan=2><div style="text-align: left;"><font align="left">±€10.000,00</font></div></td>
+</tr>
+<tr>
+<td colspan=4><font align="right"><strong>Total</strong></font></td>
+<td colspan=2><div style="text-align: left;"><font align="left"><strong>±€10.000,00</strong></font></div></td>
+</tr>
+</table>
+
+
+
+ <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+</body>
+</html>
+ 

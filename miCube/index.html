@@ -20,7 +20,7 @@ is appreciated. Thanks, broccolini!
     <meta name="citation_pdf_url" content="
 https://andrewgyork.github.io/publication_template/Publication_template%20by%20AndrewGYork
 .pdf">
-    <title>publication_template by AndrewGYork</title>
+    <title>miCube - Hohlbein Lab</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/prism.css">
@@ -42,7 +42,9 @@ experience.</p>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 .slidecontainer {
-    width: 100%;
+    width: 97.5%;
+	padding-left:1%;
+	padding-right:1.5%;
 }
 
 .slider {
@@ -76,20 +78,24 @@ experience.</p>
     cursor: pointer;
 }
 </style>
-
   </head>
   <body>
     <div class="wrapper">
       <header>
         <h1 class="header">miCube: Rethinking modular fluorescence microscopy</h1>
         <ul>
-          <li><a class="buttons github" href="
-https://github.com/HohlbeinLab/miCube">View On GitHub</a></li>
-          <li><a class="buttons pdf" href="./Publication_template%20by%20AndrewGYork.pdf">
-Download PDF</a></li>
+		<li class="first"><a href="./index.html" target="_self">Main page</a></li>
+		<li class="second"><a href="./micube_description.html" target="_self">miCube description</a></li>
+		<li class="second"><a href="./component_table.html" target="_self">Component overview</a></li>
+		<br><hr style=" margin: 0.1em auto;">
+			<font style="line-height:0.5em;">
+          <a class="buttons github" href="
+https://github.com/HohlbeinLab/miCube" style="padding-top:0px;">View On GitHub</a>&nbsp;&nbsp;&nbsp;
+          <a class="buttons pdf" href="./Publication_template%20by%20AndrewGYork.pdf" style="margin-bottom:0px; align:right;">
+Download PDF</a></font>
         </ul>
-        <p class="header">This project is maintained by <a class="header name" href="
-https://github.com/kjamartens">Koen Martens</a></p>
+        <font size = 1>This project is maintained by <a class="header name" href="
+https://github.com/kjamartens">Koen Martens</a></font>
       </header>
 <!-- 
 ##############################################################
@@ -97,27 +103,9 @@ The real text begins here.
 ##############################################################
  -->
 <section>
-<h1>Exploded view miCube</h1>
+<h1>The miCube</h1>
 
-<figure id="Figure_exploded">
-<img src="./images/miCube_exploded_animation/smallSize/exploded_0.png"
- alt="Figure Exploded" id="Figure_exploded_image" onload="loadExplodedImages()">
-<table class="figure_controls">
-  <tr>
-  <td><div class="slidecontainer">
-  <input type="range" min="0" max="20" value="0" class="slider" id="Figure_exploded_period_slider" oninput="update_figure_exploded()"></td>
-  </tr>
-</div>
-</td><td>(change this to adjust the exploded view of the miCube)</td>
-    </tr>
-</table>
-<figcaption><strong>Exploded view of miCube: An interactive figure</strong></figcaption>
-</figure><p></p>
-
-
-<h1>Rotating view miCube</h1>
-
-<figure id="Figure_rotated">
+<figure id="Figure_rotated" style="display: inline-block;  float: right; width:60%;margin-left:10px;max-width:600px;">
 <img src="./images/miCube_rotated_animation/smallSize/rotated_0.png"
  alt="Figure Rotated" id="Figure_rotated_image" onload="loadRotatedImages()">
 <table class="figure_controls">
@@ -127,11 +115,34 @@ The real text begins here.
   </tr>
 </div>
 
-</td><td>(change this to rotate the miCube)</td>
+</td><td style="padding-left: 1%;"><font size = 1><center>(change this slider to rotate the miCube)</center></font></td>
     </tr>
 </table>
 <figcaption><strong>Rotating view of miCube: An interactive figure</strong></figcaption>
+</figure>
+<p>The miCube is a simple, versatile, and modular fluorescence microscope that delivers high-grade microscopy measurements. We designed and built the microscope by combining off-the-shelf parts with a custom-designed aluminium body and open-sourced 3D printed plastic components. The miCube has different imaging modalities including regular super-resolution microscopy in both 2D and 3D, total internal reflection fluorescence (TIRF) microscopy, and epifluorescence microscopy. In contrast to most custom-built microscopes, the miCube can be built and aligned without being and expert in optics and engineering due to pre-aligned custom parts. For a detailed description of the complete microscope, go to the <a href="./micube_description.html" target="_self">descriptive overview of the miCube</a>.</p>
+
+
+<h1>miCube components</h1>
+<p>The miCube consists of roughly 30 components (see exploded view of the miCube below), which can all be 3D printed from plastic, CNC milled from aluminium, or commercially bought. Because no commercial components are used where these are not necessary, the price of the miCube is kept down. Go to the <a href="./component_table.html" target="_self">component list</a> for a detailed view of all components, along with their availability and price.</p>
+<figure id="Figure_exploded" style="margin-left:10%;width:90%;max-width:800px;">
+<img src="./images/miCube_exploded_animation/smallSize/exploded_0.png"
+ alt="Figure Exploded" style="padding-left:7%; padding-right:7%; width:86%;" id="Figure_exploded_image" onload="loadExplodedImages()" >
+ 
+<table class="figure_controls">
+  <tr>
+  <td><div class="slidecontainer">
+  <input type="range" min="0" max="20" value="0" class="slider" id="Figure_exploded_period_slider" oninput="update_figure_exploded()">
+  </td>
+  </tr>
+  
+<tr>
+</td><td style="padding-left: 1%;"><font size = 1>(change this to adjust the exploded view of the miCube)</font></td>
+    </tr>
+</table>
+<figcaption><strong>Exploded view of miCube: An interactive figure</strong></figcaption>
 </figure><p></p>
+
 
  <!--[if !IE]><script>fixScale(document);</script><![endif]-->
 </body>
