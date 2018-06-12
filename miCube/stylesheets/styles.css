@@ -296,31 +296,46 @@ table.component_list td {
   padding-left: 4px;
   padding-right: 4px;
   background: #eee;
-  vertical-align: middle;
+  vertical-align: top;
  }
  
  table.component_list th:nth-child(1){
 	width: 10px;
+	text-align: left;
  }
  table.component_list th:nth-child(2){
-	width: 190px;
+	width: 170px;
+	vertical-align:top;
  }
+
  table.component_list th:nth-child(4){
 	width: 158px;
  }
  table.component_list th:nth-child(5){
 	width: 86px;
  }
- table.component_list td:nth-child(1){
-	text-align: right;
- }
  
+ table.component_list td:nth-child(1){
+	text-align: left;
+ }
+ /*Next line is for the title of the description*/
+ table.component_list td div.discTitle{
+	font-size:110%;
+	line-height:1.85;
+	font-weight:bold;
+ }
+ /*Next lines are for the rest of the description*/
+ table.component_list td:nth-child(3){
+	font-size:80%;
+	line-height: 1.2;
+ }
  table.component_list tr.homemade td:nth-child(4){
 	background: #eee;
  }
  table.component_list td:nth-child(5){
 	text-align: right;
  }
+ 
 
 
 /* Wrapper */
@@ -380,7 +395,7 @@ header ul {
 	border:1px solid #ccc;
 	padding-top:10px;
 	padding-right:30px;
-	padding-bottom:10px;
+	padding-bottom:0px;
 	padding-left:10px;
 	background-color:#f6f6f6;
   border-radius:3px;
@@ -470,6 +485,14 @@ a.github {
   background: url(../images/octocat-small.png) no-repeat 1px;
   background-size:8px;
 }
+a.twitter {
+  background: url(../images/twitter-small.png) no-repeat 1px;
+  background-size:8px;
+}
+a.lab {
+  background: url(../images/LabLogo-small.png) no-repeat 1px;
+  background-size:8px;
+}
 
 a.pdf {
   background: url(../images/pdf.png) no-repeat 1px;
@@ -507,7 +530,7 @@ footer {
 @media print, screen and (min-width: 1161px) {
   header ul {
 	  margin-top:40px;
-	  margin-bottom:40px;
+	  margin-bottom:20px;
   }
 }
 @media print, screen and (max-width: 1160px) {
@@ -545,11 +568,11 @@ footer {
   header ul {
 	border:1px solid #ccc;
     position:absolute;
-    right:90px;
-    top:54px;
+    right:80px;
+    top:45px;
 	padding-top:10px;
-	padding-right:30px;
-	padding-bottom:10px;
+	padding-right:20px;
+	padding-bottom:0px;
 	padding-left:10px;
 	background-color:#f6f6f6;
   border-radius:3px;
