@@ -1,0 +1,104 @@
+<!doctype html>
+<!-- 
+##############################################################
+Ignore this boilerplate if you're just trying to edit the text.
+Skip to the part that says 'The real text begins here'
+##############################################################
+
+Based on this theme: https://github.com/broccolini/dinky , which mentioned that attribution 
+is appreciated. Thanks, broccolini!
+-->
+<html lang="en">
+  <head>
+    <base target="_blank">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="citation_title" content="miCube">
+    <meta name="citation_author" content="Hohlbein Lab">
+    <meta name="citation_publication_date" content="2018-06-08">
+    <title>miCube - Hohlbein Lab</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/prism.css">
+    <!--[if lt IE 9]>
+    <script src="javascript/html5shiv/html5shiv.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please 
+<a href="http://browsehappy.com/">upgrade your browser</a> to improve your 
+experience.</p>
+    <![endif]-->
+    <script src="javascript/scale-fix/scale.fix.js"></script>
+    <script src="javascript/python-highlighting/prism.js"></script>
+    <script async  src="javascript/Minimal-MathJax/MathJax.js?config=TeX-AMS_CHTML"></script>
+    <script src="javascript/update_figures.js"></script>
+    <script src="javascript/reference_list/reference_list.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.slidecontainer {
+    width: 97.5%;
+	padding-left:1%;
+	padding-right:1.5%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 50px;
+    height: 15px;
+    background: #000000;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 50px;
+    height: 15px;
+    background: #000000;
+    cursor: pointer;
+}
+</style>
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <script src="header.js"></script>
+      </header>
+<!-- 
+##############################################################
+The real text begins here.
+##############################################################
+ -->
+<section>
+<h1>Phasor-based single molecule localization in three dimensions (pSMLM-3D)</h1>
+<p>pSMLM-3D is a fast and model-free 2D and 3D single-molecule localization algorithm that allows more than 3 × 10<sup>6</sup> localizations per second to be calculated on a standard multi-core central processing unit with localization accuracies in line with the most accurate algorithms currently available. Our algorithm converts the region of interest around a point spread function to two phase vectors (phasors) by calculating the first Fourier coefficients in both the x- and y-direction. The angles of these phasors are used to localize the center of the single fluorescent emitter, and the ratio of the magnitudes of the two phasors is a measure for astigmatism, which can be used to obtain depth information (z-direction). Our approach can be used both as a stand-alone algorithm for maximizing localization speed and as a first estimator for more time consuming iterative algorithms.</p>
+<p>Read more about pSMLM-3D <a href="https://aip.scitation.org/doi/10.1063/1.5005899">here</a>, or start using it directly by getting <a href="https://github.com/kjamartens/thunderstorm/tree/phasor-intensity-1/Compiled%20plugin">the pSMLM-3D ThunderSTORM plugin</a>.</p>
+<figure style="max-width:900px;">
+<img src="images/phasor.jpg" style="mix-blend-mode: multiply; width:90%; padding-left:5%; ">
+<figcaption>
+<strong>Fig 1</strong>: Comparison of computation speed (A) and localization accuracy (B) of pSMLM-3D with other popular localization algorithms.
+</figcaption></figure>
+</section>
+<br><footer><script src="footer.js"></script></footer>
+
+ <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+</body>
+</html>
+ 
