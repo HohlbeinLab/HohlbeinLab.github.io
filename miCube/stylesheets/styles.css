@@ -31,7 +31,7 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 15px;
   color: #030303;
-  background-color: #FCFBF8;
+  background-color: #fff;/*#FCFBF8;*/
   margin: 0;
   line-height: 1.8em;
   /*-webkit-font-smoothing: antialiased;*/
@@ -204,7 +204,7 @@ p img {
 }
 
 figure {
-  border: 1px solid #ccc;
+  /*border: 1px solid #ccc;*/
   background: #FFFFFF;
 }
 
@@ -261,10 +261,16 @@ table.component_list {
   width: 100%;
   max-width: 900px;
   text-align: left;
-    border-spacing: 1px;
+    /*border-spacing: 1px;*/
     border-collapse: separate;
-   background-color: #bbb/*#232323;*/
+   background-color: #bbb;/*#232323;*/
  }
+ 
+table.component_list tr td{
+	background-color:#eee;
+   /*border-bottom: 1px solid #bbb;*/
+}
+/*table.component_list tr:last-child td{ border-bottom: none; }*/
 
 table.component_list img{
 	mix-blend-mode: multiply;
@@ -288,11 +294,9 @@ table.component_list th {
   color: #FDFEFB;
 	vertical-align: bottom;
  }
-
 table.component_list tr.homemade td{
-  background: #83C48C;
+  /*background: #83C48C;*/
 }
-
 table.component_list td {
   padding-left: 4px;
   padding-right: 4px;
@@ -321,14 +325,17 @@ table.component_list td {
  }
  /*Next line is for the title of the description*/
  table.component_list td div.discTitle{
-	font-size:110%;
-	line-height:1.85;
+	font-size:15px;
+	line-height:1.25;
+	padding-bottom:5px;
+	padding-top:5px;
 	/*font-weight:bold;*/
  }
  /*Next lines are for the rest of the description*/
  table.component_list td:nth-child(3){
 	font-size:80%;
 	line-height: 1.2;
+	padding-bottom:10px;
  }
  table.component_list tr.homemade td:nth-child(4){
 	background: #eee;
@@ -369,7 +376,7 @@ header {
   width:240px;/*170px*/
   float:left;
   position:fixed;
-  border: 1px solid #ddd;
+  /*border: 1px solid #ddd;*/
   -webkit-border-top-right-radius: 4px;
   -webkit-border-bottom-right-radius: 4px;
   -moz-border-radius-topright: 4px;
@@ -393,10 +400,10 @@ a.name {
 header ul {
   list-style:none;
   padding:0;
-	border:1px solid #ccc;
+	/*border:1px solid #ccc;*/
 	padding-top:10px;
 	padding-right:30px;
-	padding-bottom:0px;
+	padding-bottom:1px;
 	padding-left:10px;
 	background-color:#f6f6f6;
   border-radius:3px;
@@ -535,6 +542,7 @@ footer {
 
 @media print, screen and (min-width: 1161px) {
   header ul {
+  list-style:none;
 	  margin-top:40px;
 	  margin-bottom:20px;
   }
@@ -572,7 +580,8 @@ footer {
   
 
   header ul {
-	border:1px solid #ccc;
+  list-style:none;
+	/*border:1px solid #ccc;*/
     position:absolute;
     right:80px;
     top:45px;
