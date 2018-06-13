@@ -525,6 +525,7 @@ footer {
   position:fixed;
   bottom:10px;
   padding-left: 50px;
+  line-height:1em;
 }
 
 @media print, screen and (min-width: 1161px) {
