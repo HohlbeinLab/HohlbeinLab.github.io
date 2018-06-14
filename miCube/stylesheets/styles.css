@@ -367,6 +367,7 @@ h1.header {
   border-bottom: none;
   margin-top: 0;
   color: #000;
+  margin-bottom:-20px;
 }
 
 
@@ -383,9 +384,9 @@ header {
   -moz-border-radius-bottomright: 4px;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
-  padding: 34px 25px 22px 50px; /*34px 25px 22px 50px;*/
-  min-height: 184px;
-  margin: 30px 25px 0 0;
+  padding: 19px 25px 7px 50px; /*34px 25px 22px 50px;*/
+  min-height: 241px;
+  margin: 0px 25px 0 0;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -584,7 +585,7 @@ footer {
 	/*border:1px solid #ccc;*/
     position:absolute;
     right:80px;
-    top:45px;
+    top:15px;
 	padding-top:10px;
 	padding-right:20px;
 	padding-bottom:0px;
@@ -617,6 +618,7 @@ footer {
   header ul, header p.view {
     position:static;
 	max-width:200px;
+    margin-top:20px;
   }
 }
 
@@ -624,7 +626,6 @@ footer {
   header ul li.download {
     display:none;
   }
-
   footer {
     margin: 0 0 0 20px;
   }
