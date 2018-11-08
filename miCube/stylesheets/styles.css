@@ -344,6 +344,33 @@ table.component_list td {
 	text-align: right;
  }
  
+ 
+table.component_list_supplemental {
+  width: 95%;
+  max-width: 900px;
+  text-align: left;
+    /*border-spacing: 1px;*/
+    border-collapse: separate;
+   background-color: #bbb;/*#232323;*/
+ }
+table.component_list_supplemental th {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 2px;
+  background: #535353;/*#232323;*/
+  color: #FDFEFB;
+	vertical-align: bottom;
+	text-align: center;
+ }
+ 
+table.component_list_supplemental tr td{
+	background-color:#e8e8e8;
+  font-size: 8px;
+	text-align: center;
+   /*border-bottom: 1px solid #bbb;*/
+}
+/*table.component_list tr:last-child td{ border-bottom: none; }*/
 
 
 /* Wrapper */
