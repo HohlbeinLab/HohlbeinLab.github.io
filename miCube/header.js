@@ -2,6 +2,7 @@ document.write('\
 <h1 class="header">#miCube: Modular fluorescence microscopy</h1>\
         <ul>\
 		<li class="first"><a href="./index.html" target="_self">Main page</a></li>\
+		<li class="first"><a href="https://www.nature.com/articles/s41467-019-11514-0" target="_self">miCube manuscript</a></li>\
 		<!--<li class="first"><a href="./micube_description.html" target="_self">miCube description</a></li>-->\
 		<li class="first"><a href="./component_table.html" target="_self">Component overview</a></li>\
 		<li class="first"><a href="./phasor.html" target="_self">Phasor-based SMLM</a></li>\
