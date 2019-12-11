@@ -371,7 +371,35 @@ table.component_list_supplemental tr td{
 }
 /*table.component_list tr:last-child td{ border-bottom: none; }*/
 
+table.adopters {
+  width: 100%;
+  max-width: 900px;
+  text-align: left;
+    /*border-spacing: 1px;*/
+    border-collapse: separate;
+   background-color: #bbb;/*#232323;*/
+ }
 
+table.adopters tr td{
+	background-color:#eee;
+}
+table.adopters th {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 4px;
+  background: #232323;
+  color: #FDFEFB;
+	vertical-align: bottom;
+ }
+table.adopters td {
+  padding-left: 4px;
+  padding-right: 4px;
+  background: #eee;
+  vertical-align: top;
+ }
+ 
+ 
 /* Wrapper */
 .wrapper {
   /*width:1160px;*/
