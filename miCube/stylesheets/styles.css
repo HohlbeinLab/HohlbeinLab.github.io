@@ -373,7 +373,7 @@ table.component_list_supplemental tr td{
 
 table.adopters {
   width: 100%;
-  max-width: 900px;
+  /*max-width: 900px;*/
   text-align: left;
     /*border-spacing: 1px;*/
     border-collapse: separate;
@@ -382,7 +382,16 @@ table.adopters {
 
 table.adopters tr td{
 	background-color:#eee;
-}
+} /*
+ table.adopters td:nth-child(1){
+	white-space: nowrap;
+ }
+table.adopters td:nth-child(2){
+	width: 25%;
+ }
+ table.adopters td:nth-child(3){
+	width: 20%;
+ }*/
 table.adopters th {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 15px;
@@ -395,6 +404,8 @@ table.adopters th {
 table.adopters td {
   padding-left: 4px;
   padding-right: 4px;
+  padding-bottom: 4px;
+  padding-top: 4px;
   background: #eee;
   vertical-align: top;
  }

@@ -7,6 +7,7 @@ document.write('\
 		<li class="first"><a href="./component_table.html" target="_self">Component overview</a></li>\
 		<li class="first"><a href="./phasor.html" target="_self">Phasor-based SMLM</a></li>\
 		<li class="first"><a href="./related_projects.html" target="_self">Related projects</a></li>\
+		<li class="first"><a href="./adopters.html" target="_self">Adopters of the miCube</a></li>\
 		<li class="first"><a href="./people.html" target="_self">People involved</a></li>\
 		<div style="padding-top:10px;"></div><hr style=" margin: 0.1em auto;"><div style="padding-top:10px;"></div>\
 		<font style="line-height:1.5em;">\
