@@ -91,28 +91,28 @@ The real text begins here.
 <h1>SMILE: Single Molecule Imaging Laser Engine</h1>
 Engineered by <a href="https://www.wur.nl/en/Persons/JGM-John-Philippi.htm">John Philippi</a>
 <h2>Introduction</h2>
-The concept of the SMILE project is to develop a low cost laser controller which is capable
-to operate four low cost, in this case LaserTrack LDM series, lasers/drivers. All necessary information (software, hardware list, etc) can be downloaded <a href='.\Downloads\2019_Philippi_SMILE.zip'>here</a>.
+The concept of the SMILE project is to develop a low cost laser controller based on an Arduino NANO which is capable
+to operate four low cost, in this case <a href="https://www.lasertack.com/en/standard-modules">JLaserTrack LDM series</a>, lasers/drivers. All necessary information (software, hardware list, etc) can be downloaded <a href='.\Downloads\2019_Philippi_SMILE.zip'>here</a>.
 
 <h2>User Manual</h2>
 <h4>Installing the SMILE Controller</h4>
-The controller has several connectors starting from the left side is the 9V DC inlet. In the
+The controller has several connectors starting from the left side is the 9 V DC inlet. In the
 front you'll notice 5 SMA connectors corresponding from left to right, Laser 1 to the
 Camera Trigger to the right. On the right side is the type B mini USB connector.<br>
 <img src='.\images\SMILE\Fig1.jpg' width='400'><br>
-Start connect the lasers and camera using the SMA connectors.
+Start by connecting the lasers (trigger) and camera using the SMA connectors.
 Mount the controller to your optical table, if you have one, and or adjust the controller
 mounts to fit your table mount holes, generally inch pitch.
-Hook up the 9V DC mains adapter and plug it in the 9V DC laser controller socket.
+Hook up the 9V DC mains adapter and plug it in the 9 V DC laser controller socket.
 The blue LED power indicator lights up.<br>
-Connect at last the laser controller USB by USB cable connected to your computer.
+Connect at last the laser controller USB by a USB cable connected to your computer.
 Windows should automatically detect the controller hardware and starts to install the
-correct driver. Note the comport number the driver is attached to, you'll need it later.
-In case Windows does not install the driver you can download this using the following
+correct driver. Write down the comport number the driver is attached to, you'll need it later.
+In case Windows does not install the driver, you can download this using the following
 link: <a href="http://wch.cn/download/CH341SER_ZIP.html">http://wch.cn/download/CH341SER_ZIP.html</a><br>
 
 <h4>Installing the SMILE Graphical User Interface</h4>
-The SMILE GUI needs Labview RunTime Engine 2016 or higher to make it run.
+The SMILE GUI needs the Labview RunTime Engine 2016 or higher to make it run.
 This program can be downloaded, free of charge, from National Instruments ;
 <a href="http://www.ni.com/download/labview-run-time-engine-2016/6067/en/">
 http://www.ni.com/download/labview-run-time-engine-2016/6067/en/</a> <br>
@@ -150,8 +150,8 @@ The Intensity Control slider controls the intensity to a maximum of 100%&plusmn 
 output power in both manual and running mode. 
 In the Frame sequence you can control the frame pattern of Alternating Laser Excitation per
 laser. The frame sequence pattern can be set to the maximum of 4 (default 2).<br>
-The alternation interval is default 50msec. but can be set as low as 2.0msec. to
-maximum of 200msec &plusmn 0.5msec.
+The alternation interval is default 50 msec. but can be set as low as 2.0 msec. to
+maximum of 200 msec &plusmn 0.5 msec.
 Default is SMILE in User mode. Click on the User button you'll enter the SuperUser mode.
 In SuperUser mode you are able to change the pulse length per laser colour and the
 pulse delay in respect to camera trigger.
@@ -182,21 +182,21 @@ driver.
 The controller is based on the Arduino NANO hardware or better the ATMEL 328P
 microprocessor. The AT328P has in this case four useful components for this controller.
 Meaning a timer unit, UART, at least 9 digital outputs and a Serial Peripheral Interface.
-The timer unit is setup for the timer tick (500us) and originates from the (14Mhz)
+The timer unit is setup for the timer tick (500 μs) and originates from the (14 Mhz)
 resonator of NANO hardware. The UART is connected to a USB to serial converter
 operating on 57600 baud,8,1,N.
 The digital outputs operated as a set of 4 by 2. Meaning four outputs are used for
 switching off and on the analogue outputs. The other four outputs controlling the enable
 12bit SPI DACs. The last output is used for the camera sync. pulse.
 Both analogue and digital operating between 0 and 5Vdc.
-So all the additional hardware is captured in a shield including external (9Vdc) polarity
+So all the additional hardware is captured in a shield including external (9 Vdc) polarity
 protected power inlet. The power inlet was necessary especially for the 5Vdc DAC
 reference. Using the USB input voltage was too low for a full scale laser output, due to
 the Arduino +5V auto selector.
 
 <h4>Arduino NANO Software</h4>
 The main reason to design in the NANO is not only the price but also the GNU based
-development tool (WinAVR) fully integrated in Microsoft Visual Studio all provided by
+development tool (WinAVR) that is fully integrated in Microsoft Visual Studio all provided by
 Atmel (AtmelStudio). The software is written in C mainly for efficiency and portability.
 All hardware related code is sub divided in laser.c, spi.c, timer.c and uart.c.
 The laser.c part includes functions to initialise and control the laser IO as well the camera
@@ -212,9 +212,9 @@ Not in terms of assignment of variables needed but in functions to decoding the
 timing. The biggest and complex function is control the lasers. The function is written in a
 way that there is no limit to the amount of lasers. The only limit is the hardware in
 respect to IO and memory. The code for controlling the lasers are synchronised by using
-a non-interruptible timer of 500us. Both camera and laser control are in the same
+a non-interruptible timer of 500 μs. Both camera and laser control are in the same
 process cycle to keep jitter to a minimum. In running mode, using the camera out as
-trigger, jitter is less than 1 us. There is only one exception and that is during
+trigger, jitter is less than 1 μs. There is only one exception and that is during
 communication between GUI and the laser control software. Because serial
 communication is asynchrony to laser control timing changing intensity in laser running
 mode would, in worse case, effect the laser timing. To minimise this effect,
@@ -228,7 +228,7 @@ The AT328P its UART is setup for 57600 baud,8,1,N serial connection.
 The Arduino NANO driver is automatic select the correct baud rate.
 All the communication between de GUI and de laser controller is based on a two byte
 telegram captures in main.c by the structure name Telegram.
-The telegram start with a 4 bit laser color followed by a 4bit command and a 2byte data
+The telegram start with a 4 bit laser color followed by a 4 bit command and a 2 byte data
 field.
 Meaning based on this telegram, 15 lasers can be called at, 15 commands can be
 addressed , accompanied by a unsigned integer (65535) for data.
