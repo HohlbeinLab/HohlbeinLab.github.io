@@ -1,0 +1,352 @@
+<!doctype html>
+<!-- 
+##############################################################
+Ignore this boilerplate if you're just trying to edit the text.
+Skip to the part that says 'The real text begins here'
+##############################################################
+
+Based on this theme: https://github.com/broccolini/dinky , which mentioned that attribution 
+is appreciated. Thanks, broccolini!
+-->
+<html lang="en">
+  <head>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <base target="_blank">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="citation_title" content="miCube">
+    <meta name="citation_author" content="Hohlbein Lab">
+    <meta name="citation_publication_date" content="2018-06-08">
+    <title>miCube - Hohlbein Lab</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/prism.css">
+    <!--[if lt IE 9]>
+    <script src="javascript/html5shiv/html5shiv.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please 
+<a href="http://browsehappy.com/">upgrade your browser</a> to improve your 
+experience.</p>
+    <![endif]-->
+    <script src="javascript/scale-fix/scale.fix.js"></script>
+    <script src="javascript/python-highlighting/prism.js"></script>
+    <script async  src="javascript/Minimal-MathJax/MathJax.js?config=TeX-AMS_CHTML"></script>
+    <script src="javascript/update_figures.js"></script>
+    <script src="javascript/reference_list/reference_list.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.slidecontainer {
+    width: 97.5%;
+	padding-left:1%;
+	padding-right:1.5%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 50px;
+    height: 15px;
+    background: #000000;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 50px;
+    height: 15px;
+    background: #000000;
+    cursor: pointer;
+}
+</style>
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <script src="header.js"></script>
+      </header>
+<!-- 
+##############################################################
+The real text begins here.
+##############################################################
+ -->
+<section>
+<h1>SMILE: Single Molecule Imaging Laser Engine</h1>
+Engineered by <a href="https://www.wur.nl/en/Persons/JGM-John-Philippi.htm">John Philippi</a>
+<h2>Introduction</h2>
+The concept of the SMILE project is to develop a low cost laser controller which is capable
+to operate four low cost, in this case LaserTrack LDM series, lasers/drivers. All necessary information (software, hardware list, etc) can be downloaded <a href='.\Downloads\2019_Philippi_SMILE.zip'>here</a>.
+
+<h2>User Manual</h2>
+<h4>Installing the SMILE Controller</h4>
+The controller has several connectors starting from the left side is the 9V DC inlet. In the
+front you'll notice 5 SMA connectors corresponding from left to right, Laser 1 to the
+Camera Trigger to the right. On the right side is the type B mini USB connector.<br>
+<img src='.\images\SMILE\Fig1.jpg' width='400'><br>
+Start connect the lasers and camera using the SMA connectors.
+Mount the controller to your optical table, if you have one, and or adjust the controller
+mounts to fit your table mount holes, generally inch pitch.
+Hook up the 9V DC mains adapter and plug it in the 9V DC laser controller socket.
+The blue LED power indicator lights up.<br>
+Connect at last the laser controller USB by USB cable connected to your computer.
+Windows should automatically detect the controller hardware and starts to install the
+correct driver. Note the comport number the driver is attached to, you'll need it later.
+In case Windows does not install the driver you can download this using the following
+link: <a href="http://wch.cn/download/CH341SER_ZIP.html">http://wch.cn/download/CH341SER_ZIP.html</a><br>
+
+<h4>Installing the SMILE Graphical User Interface</h4>
+The SMILE GUI needs Labview RunTime Engine 2016 or higher to make it run.
+This program can be downloaded, free of charge, from National Instruments ;
+<a href="http://www.ni.com/download/labview-run-time-engine-2016/6067/en/">
+http://www.ni.com/download/labview-run-time-engine-2016/6067/en/</a> <br>
+Click the Installer Settings tab, click the Advanced button, then place a check mark in
+the Serial Port Support checkbox. This will actually install the full serial portion of the
+NI-VISA Runtime Engine.
+
+<h4>Setup SMILE GUI</h4>
+
+Unzip the SMILE.ZIP file in to your C: drive. In the SMILE directory there are four files.
+Use Win Notepad editor to modify the comport number in the Telegram.ini file. If you
+don't know the comport number, run Computer Manager in Windows, select Device
+Manager and open the Ports (COM & LPT) tab. Notice the USB-SERIAL driver showing the
+comport in brackets. 
+Copy the Telegram.ini in the root of your C: drive.<br>
+Run Smile.exe in the SMILE directory. Resize the GUI to your liking.<br>
+If you click on the Red TTL button on the left side of GUI the left laser 1 indictor light up.
+Using the corresponding Intensity Control slider you are able to control the intensity of
+the attached laser.
+
+<h4>Using SMILE GUI</h4>
+<img src='.\images\SMILE\Fig2.jpg' width='800'><br>
+From left to right: To manual switch the lasers on and off, there are four buttons in the TTL window.
+With the All TTL off button you are able to switch off all lasers in one instance.<br>
+Pushing the (linear) Intensity Gradient button you are able to access the corresponding
+window. Thereby one can enter the Maximum amount Frames to stop the ramp. The
+amount of frames a step in intensity occur and at last the intensity step itself.
+The Intensity Control slider acts as an offset in the intensity ramp.<br>
+<img src='.\images\SMILE\Fig3.jpg' width='400'><br>
+The maximum amount of frames is limited to 65535 &plusmn 1. The (intensity) step is limited to
+the max. 100% &plusmn 0.1% minus the offset ( Intensity Control).
+Note: in running mode all the ramping parameters including the Intensity Control are not
+accessible.<br>
+The Intensity Control slider controls the intensity to a maximum of 100%&plusmn 0.1% laser
+output power in both manual and running mode. 
+In the Frame sequence you can control the frame pattern of Alternating Laser Excitation per
+laser. The frame sequence pattern can be set to the maximum of 4 (default 2).<br>
+The alternation interval is default 50msec. but can be set as low as 2.0msec. to
+maximum of 200msec &plusmn 0.5msec.
+Default is SMILE in User mode. Click on the User button you'll enter the SuperUser mode.
+In SuperUser mode you are able to change the pulse length per laser colour and the
+pulse delay in respect to camera trigger.
+Note: by choosing a pulse length shorter than Alternation interval you create a post or
+trailing delay.
+
+<h2>Technical Manual</h2>
+The project  consists out of a controller based on Arduino NANO hardware
+platform and a tailor made shield as a Digital Analogue Converter/driver.
+The software for the NANO is written in C language and is main task is listening to the
+USB port commands coming from the Graphical User Interface and translates them in
+hardware related commands.
+The GUI design/layout originates from previous SMILE GUI and its main purpose is to
+create a self-guided workflow which one would expect in an Alternating Laser Excitation
+experiment.
+
+<h4>The Graphical User Interface</h4>
+The GUI is written in Labview merely for the use of its ready to use knops, sliders etc.
+The Labview Virtual Instrument is compiled in a Win64b executable called SMILE.
+As usual every knop of slider is event driven. For an event that causes to communicate
+with the laser controller there is also a call back to secure event was handled in the
+minimum of time. So in this case within GUI VI there are two processes one to catch the
+events and send them to the underlying process. The underlying process does the
+calculations, conditioning and transmitting data using the Arduino NANO communication
+driver.
+
+<h4>Controller hardware</h4>
+The controller is based on the Arduino NANO hardware or better the ATMEL 328P
+microprocessor. The AT328P has in this case four useful components for this controller.
+Meaning a timer unit, UART, at least 9 digital outputs and a Serial Peripheral Interface.
+The timer unit is setup for the timer tick (500us) and originates from the (14Mhz)
+resonator of NANO hardware. The UART is connected to a USB to serial converter
+operating on 57600 baud,8,1,N.
+The digital outputs operated as a set of 4 by 2. Meaning four outputs are used for
+switching off and on the analogue outputs. The other four outputs controlling the enable
+12bit SPI DACs. The last output is used for the camera sync. pulse.
+Both analogue and digital operating between 0 and 5Vdc.
+So all the additional hardware is captured in a shield including external (9Vdc) polarity
+protected power inlet. The power inlet was necessary especially for the 5Vdc DAC
+reference. Using the USB input voltage was too low for a full scale laser output, due to
+the Arduino +5V auto selector.
+
+<h4>Arduino NANO Software</h4>
+The main reason to design in the NANO is not only the price but also the GNU based
+development tool (WinAVR) fully integrated in Microsoft Visual Studio all provided by
+Atmel (AtmelStudio). The software is written in C mainly for efficiency and portability.
+All hardware related code is sub divided in laser.c, spi.c, timer.c and uart.c.
+The laser.c part includes functions to initialise and control the laser IO as well the camera
+IO.
+SPI.c part includes functions to initialise and sending data over the Serial Peripheral
+Interface
+Timer.c includes the function to initialise the timer hardware.
+Uart.c includes the function to initialise the UART hardware as well sending and receiving
+data. Although sending was only used for debugging.
+Main.c is traditionally master control and is far most the biggest part of the assembly.
+Not in terms of assignment of variables needed but in functions to decoding the
+(command) telegram from the GUI and respond efficient enough not to interfere with the
+timing. The biggest and complex function is control the lasers. The function is written in a
+way that there is no limit to the amount of lasers. The only limit is the hardware in
+respect to IO and memory. The code for controlling the lasers are synchronised by using
+a non-interruptible timer of 500us. Both camera and laser control are in the same
+process cycle to keep jitter to a minimum. In running mode, using the camera out as
+trigger, jitter is less than 1 us. There is only one exception and that is during
+communication between GUI and the laser control software. Because serial
+communication is asynchrony to laser control timing changing intensity in laser running
+mode would, in worse case, effect the laser timing. To minimise this effect,
+communication both USB/UART and SPI, is only allowed in odd frame (lasers are off) and
+keep the telegram as short a possible under the maximum reliable communication speed.
+To wrap things up, the laser control software uses 2144 bytes of Program Memory and
+39 bytes of Data Memory of the Arduino NANO AT386P Micro Computer.
+
+<h4>Communication protocol</h4>
+The AT328P its UART is setup for 57600 baud,8,1,N serial connection.
+The Arduino NANO driver is automatic select the correct baud rate.
+All the communication between de GUI and de laser controller is based on a two byte
+telegram captures in main.c by the structure name Telegram.
+The telegram start with a 4 bit laser color followed by a 4bit command and a 2byte data
+field.
+Meaning based on this telegram, 15 lasers can be called at, 15 commands can be
+addressed , accompanied by a unsigned integer (65535) for data.
+
+<h4>Commands</h4>
+In the SMILE project the uses 12 to the 15 commands and captured in the enumeration
+called commands e.g. MODE = 1, STATUS, SEQUENCE, COLUMNS, ALTER, DELAY, INTENS,
+FRAMES, STEP, SFRAME, FRAMET, RESET.
+
+<table class="SMILEtech">
+<tr>
+<th>Nr</th>
+<th>Name</th>
+<th>Action</th>
+<th>Type</th>
+<th>Data</th>
+<th>Range</th>
+</tr>
+<tr>
+    <td>1</td>
+    <td>MODE</td>
+    <td>Manual/Run operation</td>
+    <td>boolean</td>
+    <td>dc</td>
+    <td>0..1</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>STATUS</td>
+    <td>Laser on/off, only manual</td>
+    <td>boolean</td>
+    <td>dc</td>
+    <td>0..1</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>SEQUENCE</td>
+    <td>reading Frame Sequence</td>
+    <td>uint8</td>
+    <td>1 byte</td>
+    <td>1..255</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>COLUMNS</td>
+    <td>Frame Sequence Columns</td>
+    <td>uint8</td>
+    <td>1 byte</td>
+    <td>1..255</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>ALTER</td>
+    <td>reading Alternation Interval Time</td>
+    <td>uint16</td>
+    <td>2 bytes</td>
+    <td>1..400</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>DELAY</td>
+    <td>reading Pulse Delay</td>
+    <td>uint16</td>
+    <td>2 bytes</td>
+    <td>0..400</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>INTENS</td>
+    <td>reading laser intensity</td>
+    <td>uint16</td>
+    <td>2 bytes</td>
+    <td>0..4096</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>FRAMES</td>
+    <td>reading max. frames (int.grad.)</td>
+    <td>uint16</td>
+    <td>2 bytes</td>
+    <td>1..65535</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>STEP</td>
+    <td>reading step (int.grad.)</td>
+    <td>uint16</td>
+    <td>2 bytes</td>
+    <td>0..4096</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>SFRAME</td>
+    <td>reading steps/frame (int.grad.)</td>
+    <td>uint16</td>
+    <td>2 bytes</td>
+    <td>0..65535</td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>FRAMET</td>
+    <td>Alt. Interv. Time, Interv. &divide; Clock interv.</td>
+    <td>uint16</td>
+    <td>2 bytes</td>
+    <td>1..400</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>RESET</td>
+    <td>reset internal variables to default</td>
+    <td>boolean</td>
+    <td>dc</td>
+    <td>0..1</td>
+  </tr>
+</table>
+</section>
+<br><footer><script src="footer.js"></script></footer>
+ <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+</body>
+</html>
+ 

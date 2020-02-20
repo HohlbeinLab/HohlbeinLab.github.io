@@ -5,6 +5,7 @@ document.write('\
 		<li class="first"><a href="https://www.nature.com/articles/s41467-019-11514-0" target="_self">miCube manuscript</a></li>\
 		<!--<li class="first"><a href="./micube_description.html" target="_self">miCube description</a></li>-->\
 		<li class="first"><a href="./component_table.html" target="_self">Component overview</a></li>\
+		<li class="first"><a href="./LaserTrack_Arduino.html" target="_self">Laser engine</a></li>\
 		<li class="first"><a href="./phasor.html" target="_self">Phasor-based SMLM</a></li>\
 		<li class="first"><a href="./related_projects.html" target="_self">Related projects</a></li>\
 		<li class="first"><a href="./Adopters.html" target="_self">Adopters of the miCube</a></li>\
